@@ -30,6 +30,6 @@ public abstract class Employee {
     }
 
     public int payBonus(){
-        return getSalary() / 100 * 1;
+        return this.salary / 100 * 1;
     }
 }
