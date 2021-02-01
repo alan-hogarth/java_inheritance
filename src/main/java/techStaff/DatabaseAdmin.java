@@ -8,12 +8,4 @@ public class DatabaseAdmin extends Employee {
         super(name, niNumber, salary);
     }
 
-    public double raiseSalary(Double raise){
-        double newSalary =  getSalary() * raise;
-        return getSalary() + newSalary;
-    }
-
-    public int payBonus(){
-        return getSalary() / 100 * 1;
-    }
 }

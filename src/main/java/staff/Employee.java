@@ -16,6 +16,12 @@ public abstract class Employee {
         return name;
     }
 
+    public void setName(String name) {
+        if (name != "") {
+            this.name = name;
+        }
+    }
+
     public String getNiNumber() {
         return niNumber;
     }
@@ -24,9 +30,10 @@ public abstract class Employee {
         return salary;
     }
 
-    public double raiseSalary(Double raise){
-        double newSalary =  getSalary() * raise;
-        return getSalary() + newSalary;
+    public void raiseSalary(Double raise){
+        if (raise > 0) {
+           salary += raise;
+        }
     }
 
     public int payBonus(){

@@ -6,7 +6,7 @@ import techStaff.Developer;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class ManagerTest {
+public class EmployeeTest {
 
     Employee employee;
 
@@ -39,7 +39,20 @@ public class ManagerTest {
 
     @Test
     public void canRaiseSalary() {
-       assertEquals(6000.0, employee.raiseSalary(0.5));
+        employee.raiseSalary(2000.0);
+       assertEquals(6000, employee.getSalary());
+    }
+
+    @Test
+    public void canChangeName(){
+        employee.setName("Klaus");
+        assertEquals("Klaus", employee.getName());
+    }
+
+    @Test
+    public void cantChangeName(){
+        employee.setName("");
+        assertEquals("Zardoz", employee.getName());
     }
 
     @Test
